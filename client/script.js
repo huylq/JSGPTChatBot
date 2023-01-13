@@ -77,7 +77,7 @@ const handleSubmit = async (e) => {
   loader(messageDiv);
 
   //fetch data from server
-  const response = await fetch('https://gptchat-06m2.onrender.com', {
+  const response = await fetch('https://jsgpt-chat-bot.vercel.app/', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -99,7 +99,7 @@ const handleSubmit = async (e) => {
     const err = await response.text();
 
     messageDiv.innerHTML = 'Something went wrong!';
-    alert(err)
+    alert('Oops, something went wrong, please try again after a minute!')
   }
 }
 
